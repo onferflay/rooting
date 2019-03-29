@@ -1,16 +1,16 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-cockpitpage',
+  templateUrl: './cockpitpage.component.html',
+  styleUrls: ['./cockpitpage.component.css']
 })
-export class AppComponent{
+export class CockpitpageComponent implements OnInit {
+
   ckid :string;
   ck:string;
 
-  
   constructor(private route:ActivatedRoute) {}
 
   ngOnInit() {
@@ -19,4 +19,5 @@ export class AppComponent{
         this.ck = params['ck'];
     });
   }
+
 }
